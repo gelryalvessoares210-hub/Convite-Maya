@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maya Gabrielly — 1 Aninho 🌺</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(#72d8e8, #e8f6df, #f4d29b);
+    color: #513c2c;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fffaf0;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+
+.foto {
+    width: 100%;
+    display: block;
+}
+
+.conteudo {
+    padding: 25px;
+    text-align: center;
+}
+
+h1 {
+    color: #b84c55;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.informacoes {
+    background: #fff1d3;
+    border-radius: 20px;
+    padding: 18px;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.informacoes p {
+    margin: 12px 0;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 50px;
+    background: #e85d6b;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario {
+    display: none;
+    margin-top: 20px;
+    background: #f8eee0;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d4c0a5;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.enviar {
+    margin-top: 18px;
+    background: #1c9aa5;
+}
+
+.rodape {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #806c59;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FOTO DA MAYA -->
+    <img src="ChatGPT Image 10 de ago. de 2026, 16_15_30.png" class="foto" alt="Maya Gabrielly">
+
+    <div class="conteudo">
+
+        <h1>🌺 MAYA GABRIELLY 🌺</h1>
+
+        <div class="subtitulo">
+            1 ANINHO! 🎂💕
+        </div>
+
+        <div class="mensagem">
+            🌊 Uma aventura pelo oceano está começando! 🌊
+            <br><br>
+            Você é nosso convidado especial para comemorar
+            o primeiro aniversário da nossa princesa!
+        </div>
+
+        <div class="informacoes">
+
+            <p>📅 <strong>Data:</strong> 04/10/2026</p>
+
+            <p>🕐 <strong>Horário:</strong> A confirmar</p>
+
+            <p>
+                📍 <strong>Local:</strong><br>
+                Rua Liberia, 512<br>
+                Vila Palmital — Pinhais - PR
+            </p>
+
+        </div>
+
+        <button
+            class="botao"
+            onclick="mostrarFormulario()">
+            💕 CONFIRMAR PRESENÇA
+        </button>
+
+        <form
+            id="formulario"
+            class="formulario"
+            onsubmit="enviarConfirmacao(event)">
+
+            <label>Seu nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                required>
+
+            <label>Você irá?</label>
+
+            <select id="presenca" required>
+
+                <option value="">
+                    Selecione
+                </option>
+
+                <option>
+                    Sim, estarei presente! 🎉
+                </option>
+
+                <option>
+                    Infelizmente não poderei ir.
+                </option>
+
+            </select>
+
+            <label>
+                Quantidade de pessoas
+            </label>
+
+            <input
+                type="number"
+                id="quantidade"
+                min="1"
+                value="1"
+                required>
+
+            <label>
+                Observação (opcional)
+            </label>
+
+            <textarea
+                id="observacao"
+                rows="3"
+                placeholder="Nome dos acompanhantes, por exemplo">
+            </textarea>
+
+            <button
+                type="submit"
+                class="botao enviar">
+
+                📱 ENVIAR CONFIRMAÇÃO
+
+            </button>
+
+        </form>
+
+        <div class="rodape">
+
+            🌴 Com carinho,<br>
+            <strong>Gabriel Alves</strong><br>
+            Papai da princesa Maya ❤️
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function mostrarFormulario() {
+
+    document.getElementById("formulario").style.display = "block";
+
+}
+
+function enviarConfirmacao(event) {
+
+    event.preventDefault();
+
+    const nome =
+        document.getElementById("nome").value;
+
+    const presenca =
+        document.getElementById("presenca").value;
+
+    const quantidade =
+        document.getElementById("quantidade").value;
+
+    const observacao =
+        document.getElementById("observacao").value;
+
+    const mensagem =
+        "🌺 CONFIRMAÇÃO — ANIVERSÁRIO DA MAYA 🌺%0A%0A" +
+
+        "👤 Nome: " + nome + "%0A" +
+
+        "🎉 Presença: " + presenca + "%0A" +
+
+        "👨‍👩‍👧 Quantidade de pessoas: " +
+        quantidade + "%0A" +
+
+        (observacao
+            ? "💬 Observação: " +
+              observacao + "%0A"
+            : "") +
+
+        "%0A🎂 Aniversário da Maya Gabrielly" +
+        "%0A📅 04/10/2026";
+
+    window.open(
+        "https://wa.me/5541999322070?text=" +
+        mensagem,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
